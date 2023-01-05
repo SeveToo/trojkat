@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --main-color: #191919;
+  --text-color: #a2a2a2;
+  --second-color: rgb(11, 240, 30);
+  --df-margin: 10px;
+  --df-padding: 10px;
+  --df-radius: 5px;
+  --df-border: 5px solid var(--secound-color);
+  scroll-behavior: smooth;
+
+
+  --color1: #FFAEBC;
+  --color2: #FFD6A2;
+  --color3: #F2E9E4;
+  --color4: #A8DADC;
+  --color5: #B5FFFC;
+  /* --animate: animate 10s linear infinite; */
+}
+
+/* let animate --second-color */
+@keyframes animate {
+  0%{
+    --second-color: var(--color1);
+  }
+  16.6% {
+    --second-color: var(--color2);
+  }
+  33.3% {
+    --second-color: var(--color3);
+  }
+  50% {
+    --second-color: var(--color4);
+  }
+  66.6% {
+    --second-color: var(--color5);
+  }
+  83.3% {
+    --second-color: var(--color1);
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--main-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: var(--animate)
+}
+
+.inputs__area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  gap: 10px;
+  margin: 10px;
+} 
+
+.input_box {
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .inputs__area {
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .input_box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+.input_box__label {
+  /* font-size: 1.5rem; */
+}
+
+.input_box__input {
+  border: 1px solid var(--second-color);
+  border-radius: 5px;
+  padding: 10px;
+  width: minmax(100px, 300px);
+  max-width: 100%;
+  font-size: 1.5rem;
+  background: transparent;
+  color: var(--text-color);
+}
+
+.submit_button {
+  background: transparent;
+  padding: .6rem 1.3rem ;
+  font-size: 1.1rem;
+  color: var(--second-color);
+  cursor: pointer;
+  height: 2.5rem;
+  width: 7rem;
+  position: relative;
+  border: none;
+  box-sizing: border-box;
+}
+
+.submit_button__box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--second-color);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: .3s;
+  /* background: red; */
+}
+
+.submit_button__text,.submit_button__icon{
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: .4s;
+}
+.submit_button__icon{
+  top: -50%;
+  font-size: 4rem;
+}
+
+.submit_button:hover .submit_button__box {
+  transform: translate(-50%, -40%);
+}
+
+.submit_button:hover .submit_button__text {
+  top: 150%;
+}
+
+.submit_button:hover .submit_button__icon {
+  top: 95%;
+}
+  
+
+.output_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.output_box__warning {
+  color:rgb(11, 240, 30);
+  text-align: center;
+}
+
+.output_box__data_set {
+  width: 480px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  /* border: 1px solid var(--second-color); */
+}
+
+.output_box__data_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.output_box__canvas {
+  border: 1px solid var(--second-color);
+  /* background: white; */
+  border-radius: 5px;
+  margin: 10px;
+  /* padding: 10px; */
+  box-shadow: 0 4px 40px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.output_box__button {
+  background: transparent;
+  padding: .6rem .6rem ;
+  font-size: 1.1rem;
+  color: var(--second-color);
+  cursor: pointer;
+  height: 2.5rem;
+  width: 3rem;
+  position: relative;
+  border: none;
+  box-sizing: border-box;
+  /* border: 1px solid var(--second-color); */
+}
+

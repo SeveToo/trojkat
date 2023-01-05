@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTheme</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="inputs__area">
+      <h1>Podaj boki trójkąta</h1>
+      <label class="input_box" for="a_side">
+        <span class="input_box__label">a:</span>
+        <input value="6" class="input_box__input" type="text" id="a_side">
+      </label>
+      <label class="input_box" for="b_side">
+        <span class="input_box__label">b:</span>
+        <input value="2" class="input_box__input" type="text" id="b_side">
+      </label>
+      <label class="input_box" for="c_side">
+        <span class="input_box__label">c:</span>
+        <input value="5" class="input_box__input" type="text" id="c_side">
+      </label>
+      <button class="submit_button">
+        <div class="submit_button__box">
+          <div class="submit_button__text">Zobacz</div>
+          <div class="submit_button__icon">ꜜ</div>
+        </div>
+      </button>
+      <div class="output_box">
+        <div class="output_box__data_set"></div>
+        <canvas class="output_box__canvas" width="500px" height="500px"></canvas>
+        <div class="output_box__buttons">
+          Zoom
+          <button class="output_box__button zoom_in">+</button>
+          <button class="output_box__button zoom_out">-</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
